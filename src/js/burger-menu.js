@@ -1,17 +1,4 @@
 $( document ).ready(function() {
-    let navParent = $(".nav-item-parent-content").parent();
-    navParent.addClass("parentish");
-    navParent.mouseenter(function(){
-        $(this).children(".nav-item-parent-content").addClass("active");
-    });
-    navParent.mouseleave(function () {
-        $(this).children(".nav-item-parent-content").mouseleave(function () {
-            $(this).removeClass("d-flex");
-        });
-        $(this).children(".nav-item-parent-content").removeClass("active");
-    })
-});
-$( document ).ready(function() {
     $(".burger-icon__open").click(function () {
         $(this).addClass('icon-open');
         $(".burger-icon__close").addClass("icon-close");

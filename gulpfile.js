@@ -3,10 +3,12 @@ let source_folder = "src";
 
 let fs = require('fs');
 
+let jquery = require('jquery');
+
 let path = {
     build: {
         html: project_folder + "/",
-        css: project_folder + "/ccs/",
+        css: project_folder + "/css/",
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
@@ -90,8 +92,21 @@ function css() {
         .pipe(browsersync.stream())
 }
 
+gulp.task('jquery', function () {
+    return gulp.src('./node_modules/jquery/src')
+        .pipe(jquery({
+            flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
+        }))
+        .pipe(dest(path.build.js));
+});
+
 function js() {
-    return src(path.src.js)
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/bootstrap/dist/js/bootstrap.js',
+        'node_modules/@popperjs/core/dist/cjs/popper.js',
+        path.src.js
+        ])
         .pipe(fileinclude())
         .pipe(dest(path.build.js))
         .pipe(
@@ -184,6 +199,7 @@ let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), font
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
+exports.clean = clean;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
