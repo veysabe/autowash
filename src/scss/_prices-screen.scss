@@ -1,0 +1,89 @@
+.prices-screen {
+  padding-top: 60px;
+  background-color: $lightGray;
+
+  .prices-screen__content {
+    .prices-screen__info-text {
+      padding: 64px 0;
+      color: $blue;
+    }
+
+    .prices-screen__items {
+      padding-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 100px;
+
+      .price-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .price-item__image {
+          filter: grayscale(100%);
+          transition: filter .3s;
+
+          &:hover {
+            filter: grayscale(0);
+            transition: filter .3s;
+          }
+        }
+
+        .price-item__bill {
+          border-bottom: 2px solid $lightGray2;
+          width: 100%;
+
+          span {
+            text-align: center;
+          }
+
+          .price-item__bill-item {
+            border-top: 1px solid $lightGray2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 20px 2px 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pixel-perfect {
+  .prices-screen__content {
+    @media (max-width: 1140px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .prices-screen__info-text
+    {
+      width: 548px;
+      @media (max-width: 1140px) {
+        width: 280px;
+      }
+    }
+  }
+  .prices-screen__items {
+    .price-item {
+      width: 300px;
+      .price-item__image {
+        height: 166.39px;
+        @media (max-width: 1140px) {
+          height: 96px;
+        }
+      }
+      .subtitle-4 {
+        margin: 37px 0 12px 0;
+      }
+      @media (max-width: 1140px) {
+        width: 130px;
+      }
+    }
+    @media (max-width: 1140px) {
+      grid-template-columns: 130px 130px !important;
+    }
+  }
+}

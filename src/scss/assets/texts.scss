@@ -18,10 +18,10 @@ h2 {
 }
 
 .headline-4, h4 {
-  font-family: Ubuntu !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  font-size: 20px !important;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .subtitle-1 {
@@ -33,45 +33,45 @@ h2 {
 }
 
 .subtitle-2 {
-  font-family: Ubuntu !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  line-height: 22px !important;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .subtitle-3 {
-  font-family: Ubuntu !important;
-  font-style: normal !important;
-  font-weight: 300 !important;
-  font-size: 12px !important;
-  line-height: 15px !important;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .subtitle-4 {
-  font-family: Open Sans !important;
-  font-style: normal !important;
-  font-weight: bold !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 @media (max-width: 1140px) {
   h1 {
-    font-size: 23px !important;
-    line-height: 120% !important;
+    font-size: 23px;
+    line-height: 120%;
   }
   h2 {
-    font-size: 20px !important;
-    line-height: 25px !important;
+    font-size: 20px;
+    line-height: 25px;
   }
   .headline-4, h4 {
-    font-size: 12px !important;
+    font-size: 12px;
   }
   .subtitle-3 {
-    font-size: 7px !important;
+    font-size: 7px;
   }
   .subtitle-2 {
-    line-height: 20px !important;
+    line-height: 20px;
   }
 }

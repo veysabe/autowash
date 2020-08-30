@@ -6,9 +6,11 @@ $( document ).ready(function() {
         $("body").addClass("overflow-hidden");
         $(".header__mobile-menu-content").removeClass("d-none");
         setTimeout(function (){
-
             $(".header__mobile-menu-content").addClass("active");
-
+        }, 2);
+        $('.header__mobile-menu').append("<div id='bg-for-menu'></div>");
+        setTimeout(function (){
+            $("#bg-for-menu").addClass('bg-for-menu');
         }, 2);
     })
     $(".burger-icon__close").click(function () {
@@ -20,5 +22,9 @@ $( document ).ready(function() {
         setTimeout(function (){
             $(".header__mobile-menu-content").addClass("d-none");
         }, 302);
+        $("div#bg-for-menu").removeClass('bg-for-menu');
+        setTimeout(function (){
+            $("div#bg-for-menu").remove();
+        }, 301);
     })
 });
