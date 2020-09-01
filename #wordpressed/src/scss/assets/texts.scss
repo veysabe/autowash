@@ -1,0 +1,77 @@
+
+h1 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.headline-4, h4 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.subtitle-1 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.subtitle-2 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.subtitle-3 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.subtitle-4 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (max-width: 1140px) {
+  h1 {
+    font-size: 23px;
+    line-height: 120%;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .headline-4, h4 {
+    font-size: 12px;
+  }
+  .subtitle-3 {
+    font-size: 7px;
+  }
+  .subtitle-2 {
+    line-height: 20px;
+  }
+}

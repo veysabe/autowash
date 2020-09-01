@@ -1,0 +1,48 @@
+.main-screen {
+  background: linear-gradient(90deg, transparentize($darkBlue, 0.4), transparentize($darkBlue, 0.4)), url("../img/first-block-bg.png") no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+
+  .main-screen-container {
+    background: transparentize($blue, 0.95);
+  }
+
+  .label {
+    position: absolute;
+    border: 1px solid white;
+    bottom: 48px;
+    right: 13px;
+    padding: $buttonsPadding;
+    color: white;
+    line-height: 15px;
+  }
+
+  .main-screen__text {
+    color: white;
+    padding-top: 4.2rem;
+    padding-bottom: 7.75rem;
+
+    .main-screen__text-info {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 44px;
+        height: 1px;
+        background: $lightGray;
+        left: -40px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.pixel-perfect {
+  .main-screen {
+    .main-screen__text {
+      padding-top: 67px;
+      padding-bottom: 124px;
+    }
+  }
+}

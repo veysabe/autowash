@@ -1,0 +1,140 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "fonts";
+@import "assets/variables";
+@import "assets/texts";
+@import "header";
+@import "main-screen";
+@import "prices-screen";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background: #BAD;
+}
+
+li {
+  list-style-type: none;
+ }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.page-wrapper {
+  max-width: 1102px;
+  margin: auto;
+}
+
+.btn-outline-secondary {
+  color: $lightGray !important;
+  padding: $buttonsPadding;
+  border-radius: 8px !important;
+  border-color: white !important;
+}
+
+.btn-outline-secondary:hover {
+  color: white !important;
+  background: transparentize($blue, 0.5) !important;
+}
+
+a.vers-button {
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.vers-button {
+  position: fixed;
+  cursor: pointer;
+  z-index: 101;
+  bottom: 0;
+  right: 0;
+  margin: 0 0 10px 10px;
+  border: 1px solid $lightGray;
+  border-radius: 8px;
+  padding: $buttonsPadding;
+  background: transparentize($blue, 0.5);
+  color: white;
+  transition: .3s all ease-in-out;
+  &:hover {
+    background: transparentize($blue, 0.3);
+    transition: .3s all ease-in-out;
+  }
+}
+
+.pixel-perfect {
+  .vers-button {
+    background: transparentize(green, 0.5);
+    transition: .3s all ease-in-out;
+    &:hover {
+      background: transparentize(green, 0.3);
+      transition: .3s all ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .header {
+    position: absolute !important;
+    right: 0;
+    width: 100%;
+  }
+  .header__upper-logo {
+    z-index: 1;
+  }
+  .header__lower, .header__upper-info, .label {
+    display: none !important;
+  }
+  .prices-screen__items {
+    grid-template-columns: 1fr 1fr !important;
+    grid-gap: 20px !important;
+  }
+  .page-wrapper {
+    padding: 0 20px !important;
+  }
+  .main-screen__text-info {
+    margin-left: 20px;
+  }
+  .price-item__image {
+    max-width: 100%;
+    height: 96px;
+  }
+  .price-item__bill-item {
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: start !important;
+
+    span {
+      text-align: left !important;
+    }
+  }
+  .prices-screen__info-text > span {
+    font-weight: 300 !important;
+    font-size: 15px !important;
+  }
+  .main-screen__text-info:before {
+    width: 20px !important;
+    left: -16px !important;
+  }
+  .header__mobile-menu {
+    display: block !important;
+  }
+  .main-screen__text {
+    padding-top: 6rem !important;
+  }
+}
